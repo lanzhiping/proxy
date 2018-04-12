@@ -81,3 +81,5 @@ server.addListener('connect', function (req, socket, bodyhead) {
   });
 
 });
+
+server.setTimeout(0)
