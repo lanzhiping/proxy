@@ -3,8 +3,8 @@ var http = require('http');
 var options = {
     hostname : 'zhiping-proxy.herokuapp.com',
     port     : 80,
-    path     : 'www.google.com:443',
-    method     : 'CONNECT'
+    path     : 'baidu.com:80',
+    method     : 'GET'
 };
 
 var req = http.request(options);
@@ -31,5 +31,7 @@ req.on('connect', function(res, socket) {
 req.on('error', (error) => {
     console.log('req error', JSON.stringify(error))
 })
+
+req.on(''
 
 req.end();
