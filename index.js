@@ -107,6 +107,8 @@ function request(cReq, cRes) {
         cRes.end();
     });
 
+    console.log('proxying request for: ', u.hostname, u.port)
+
     cReq.pipe(pReq);
 }
 
@@ -119,6 +121,8 @@ function connect(cReq, cSock) {
     }).on('error', function(e) {
         cSock.end();
     });
+
+    console.log('proxying request https for: ', u.hostname, u.port)
 
     cSock.pipe(pSock);
 }
